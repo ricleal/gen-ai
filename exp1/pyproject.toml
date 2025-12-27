@@ -1,0 +1,48 @@
+[project]
+name = "exp1"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dbos>=2.7.0",
+    "fastapi>=0.127.0",
+    "llama-index>=0.14.10",
+    "llama-index-embeddings-huggingface>=0.6.1",
+    "llama-index-llms-ollama>=0.9.1",
+    "llama-index-workflows>=2.11.6",
+    "ollama>=0.6.1",
+    "psutil>=7.2.0",
+    "uvicorn>=0.40.0",
+]
+
+
+[tool.ruff]
+line-length = 127
+target-version = "py312"
+extend-exclude = []
+exclude = [
+    ".venv",
+    "build",
+    "dist",
+    "__pypackages__",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = []
+
+[tool.ruff.lint.isort]
+known-first-party = ["riga"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+
+[dependency-groups]
+dev = [
+    "fastapi-cli>=0.0.20",
+    "ipython>=9.8.0",
+    "ruff>=0.14.10",
+]
