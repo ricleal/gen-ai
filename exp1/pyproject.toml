@@ -5,11 +5,13 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "chromadb>=1.4.0",
     "dbos>=2.7.0",
     "fastapi>=0.127.0",
     "llama-index>=0.14.10",
     "llama-index-embeddings-huggingface>=0.6.1",
     "llama-index-llms-ollama>=0.9.1",
+    "llama-index-vector-stores-chroma>=0.5.3",
     "llama-index-workflows>=2.11.6",
     "ollama>=0.6.1",
     "psutil>=7.2.0",

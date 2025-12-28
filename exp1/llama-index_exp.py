@@ -4,7 +4,8 @@ from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.llms.ollama import Ollama
 
 # Configure Ollama as the LLM and local embeddings
-Settings.llm = Ollama(model="gemma3:270m", request_timeout=120.0)
+Settings.llm = Ollama(model="deepseek-r1:1.5b", request_timeout=120.0)
+# Uses HuggingFace embeddings (BAAI/bge-small-en-v1.5) to convert text into vectors
 Settings.embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
 
 # the data was downloaded before with `llamaindex-cli download-llamadataset PaulGrahamEssayDataset --download-dir ./data`
